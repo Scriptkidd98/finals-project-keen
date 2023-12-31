@@ -29,7 +29,7 @@
             </div>
 
             <div class="onboarding-body-middle-div">
-                <button class="onboarding-select-button howkeenselectbutton" onclick="toggleSelection(this)">
+                <button class="onboarding-select-button howkeenselectbutton" onclick="toggleSelection(this, 1)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>
                         <p className="howkeenselectbuttonheadingtext">😌 Chill</p>
@@ -37,7 +37,7 @@
                     </span>
                 </button>
                 
-                <button class="onboarding-select-button howkeenselectbutton" onclick="toggleSelection(this)">
+                <button class="onboarding-select-button howkeenselectbutton" onclick="toggleSelection(this, 2)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>
                         <p className="howkeenselectbuttonheadingtext">🙂 Balanced</p>
@@ -45,7 +45,7 @@
                     </span>
                 </button>
                 
-                <button class="onboarding-select-button howkeenselectbutton" onclick="toggleSelection(this)">
+                <button class="onboarding-select-button howkeenselectbutton" onclick="toggleSelection(this, 3)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>
                         <p className="howkeenselectbuttonheadingtext">🤪 Thrilled</p>
@@ -70,7 +70,7 @@
                 const email = localStorage.getItem('email');
                 window.location.href = "register.jsp?email=" + encodeURIComponent(email);
             }
-            function toggleSelection(button) {
+            function toggleSelection(button, number) {
                 const selectButtons = document.querySelectorAll('.onboarding-select-button');
                 
                 selectButtons.forEach(otherButton => {
@@ -81,7 +81,15 @@
                 
                 button.classList.add('checked');
                 button.querySelector('.selectButtonRadio').src = 'Radio.svg';
-                button.style.backgroundColor = 'rgba(218, 245, 254, 1)';                
+                button.style.backgroundColor = 'rgba(218, 245, 254, 1)'; 
+                
+                if(number === 1) {
+                    localStorage.setItem('how-keen', 'Chill');
+                } else if(number === 2) {
+                    localStorage.setItem('how-keen', 'Balanced');
+                } else if(number === 3) {
+                    localStorage.setItem('how-keen', 'Thrilled');
+                }
             }
         </script>
     </body>

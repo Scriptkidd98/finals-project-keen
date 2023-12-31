@@ -29,22 +29,22 @@
             </div>
 
             <div class="onboarding-body-middle-div">
-                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                <button class="onboarding-select-button" onclick="toggleSelection(this, 1)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>🧳 Solo</span>
                 </button>
                 
-                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                <button class="onboarding-select-button" onclick="toggleSelection(this, 2)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>👨‍👩‍👦 Family</span>
                 </button>
                 
-                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                <button class="onboarding-select-button" onclick="toggleSelection(this, 3)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>👬 Friends</span>
                 </button>
                 
-                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                <button class="onboarding-select-button" onclick="toggleSelection(this, 4)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>👫 Couple</span>
                 </button>
@@ -65,7 +65,7 @@
             function navigateToLocation() {
                 window.location.href = 'location.html';
             }
-            function toggleSelection(button) {
+            function toggleSelection(button, number) {
                 const selectButtons = document.querySelectorAll('.onboarding-select-button');
                 
                 selectButtons.forEach(otherButton => {
@@ -76,7 +76,17 @@
                 
                 button.classList.add('checked');
                 button.querySelector('.selectButtonRadio').src = 'Radio.svg';
-                button.style.backgroundColor = 'rgba(218, 245, 254, 1)';                
+                button.style.backgroundColor = 'rgba(218, 245, 254, 1)'; 
+                
+                if(number === 1) {
+                    localStorage.setItem('crew', 'Solo');
+                } else if(number === 2) {
+                    localStorage.setItem('crew', 'Family');
+                } else if(number === 3) {
+                    localStorage.setItem('crew', 'Friends');
+                } else if(number === 4) {
+                    localStorage.setItem('crew', 'Couple');
+                }
             }
         </script>
     </body>
