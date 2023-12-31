@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keen | Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="myStyles.css"/>
+    </head>
+    <body class="register-email-body body-div registration-onboarding-body-div">
+        <div class="onboarding-header">
+            <button class="onboarding-header-back-button-div center-flex" onclick="navigateToPrevious()">
+                <img
+                    src="Back-Chevron-Icon.svg"
+                    alt='Back Chevron Icon' 
+                    class="onboarding-header-back-chevron-icon"  
+                />
+            </button>
+            <div class="registration-onboarding-number-div center-flex">2/3</div>
+        </div>
+        <div>
+            <h1 class="registration-heading">What is your email?</h1>
+            <div class="column-flex">
+                <input placeholder="johndoe@gmail.com" name="email" type="email" class="register-email-input" required/>
+                
+                <button class="onboarding-action-button center-flex" onclick="submitEmail()">
+                    Next
+                    <img src="Forward-Arrow-Icon.svg" alt="Forward Arrow Icon" className="onboarding-action-button-forward-arrow-icon" style="margin-left: 5px"/>
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            function submitEmail() {
+                const email = document.querySelector('.register-email-input').value;
+                localStorage.setItem('email', email);
+                window.location.href = 'register-password.html';
+            }
+            function navigateToPrevious() {
+                window.location.href = 'register-name.html';
+            }
+        </script>
+    </body>
+</html>

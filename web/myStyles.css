@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0px; 
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+button {
+    cursor: pointer;
+}
+.login-page-body,
+.column-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-page-body,
+.register-name-body,
+.register-email-body,
+.register-password-body {
+    background: linear-gradient(to bottom, #A1DBF0, #D9F1F9);
+}
+.body-div {
+    padding: 30px 50px;
+    min-height: 100vh;
+}
+@media(max-width: 480px) {
+    .body-div {
+        padding: 30px 10px;
+    } 
+}
+@media(min-width: 481px) and (max-width: 767px) {
+    .body-div {
+        padding: 30px 30px;
+    } 
+}
+.logo-image {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+}
+.keen-text-image {
+    width: 148px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+.input-div {
+    width: 327px;
+    height: 60px;
+    border-radius: 50px;
+    border: 0px solid var(--White, #FFF);
+    background: #D9F1F9;
+}
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-div input {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    background-color: transparent;
+    padding-left: 20px;
+    border: none;
+}
+.email-input-div {
+    margin-top: 50px;
+}
+.password-input-div {
+    margin-top: 16px;
+}
+.login-button {
+    border-radius: 50px;
+    background: #9FDBED;
+    width: 327px;
+    height: 62px;
+    flex-shrink: 0;
+    border: none;
+    margin-top: 20px;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}
+.dont-have-account {
+    color: #3B4C68;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.sign-up-link {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+.onboarding-header-back-button-div {
+    height: 32px;
+    width: 32px;
+    background: rgba(217, 245, 254, 0.5);
+    border-radius: 50%;
+    border: none;
+}
+.onboarding-header-back-chevron-icon {
+    height: 10px;
+    width: 4px;
+}
+.registration-heading {
+    color: white;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: -0.32px;
+    margin: 50px 0px 32px 0px;
+    
+}
+.registration-onboarding-number-div {
+    color: white;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50px;
+    height: 50px;
+    border:3px solid rgba(255, 255, 255, 0.30);
+    border-radius: 50%;
+}
+.registration-onboarding-body-div .onboarding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.register-name-input,
+.register-email-input,
+.register-password-input {
+    border: none;
+    background-color: transparent;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.25px;
+}
+@media(min-width: 768px) {
+    .register-name-input,
+    .register-email-input,
+    .register-password-input {
+        width: 327px;
+    }
+}
+@media(max-width: 767px) {
+    .register-name-input,
+    .register-email-input,
+    .register-password-input {
+        width: 80%;
+        margin: 0px auto
+    }
+}
+.onboarding-action-button {
+    background-image: linear-gradient(180deg, #A1DBEF 34.8%, #CAEEFA 74.84%, rgba(218, 245, 254, 0.76) 97.57%);
+    width: 248px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 50px auto 0px auto;
+    padding: 2.5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0;
+    color: #000;
+}  
+.confirm-password-input {
+    margin-top: 10px;
+}
+.onboarding-header-progress-container {
+    flex: 1;
+}
+.onboarding-header-progress-outer-div {
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(247, 247, 247);
+    width: 126px;
+}
+.onboarding-header-progress-inner-div {
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(185, 230, 245);
+}
+.onboarding-body-div {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.onboarding-heading-text {
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.onboarding-info-text {
+    color: rgba(122, 118, 118, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 8px 0px;
+}
+.onboarding-body-middle-div {
+    margin: 20px 0px;
+    flex: 1;
+    min-height: 432px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.keenspan {
+    color: rgb(185, 230, 245);
+}
+.onboarding-select-button {
+    border: 2px solid rgba(218, 245, 254, 1);
+    width: 327px;
+    min-height: 72px;
+    padding: 24px 20px 24px 20px;
+    border-radius: 40px;
+    gap: 16px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    margin: 5px auto;
+    background-color: transparent;
+}
+.onboarding-select-button span {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.selectButtonRadio {
+    height: 18px;
+    width: 18px;
+}
+.howkeenselectbuttonheadingtext {
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+.howkeenselectbuttoninfotext {
+    color: rgba(122, 118, 118, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+}   
+.howkeenselectbutton p {
+    text-align: left;
+    margin: 0px;
+}
+
+.borderradiusmapdiv {
+    background-image: url('Map-Image.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    background-size: cover;
+}
+.locationsearchdiv {
+    border: 2px solid rgba(218, 245, 254, 1);
+    width: 320px;
+    height: 56px;
+    padding: 8px 6px 8px 16px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    gap: 10px;
+    align-items: center;
+    margin: 40px auto 30px auto;
+}
+.locationicon {
+    height: 24px;
+    width: 24px;
+}
+.locationsearchdiv input,
+.locationsearchdiv input:focus {
+    border: none;
+    outline: none;
+}
+.borderradiusmapdiv button {
+    margin-bottom: 60px;
+}
+
+.onboardinglocationbodydiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.upperlocationdiv {
+    min-height: 37.8078818vh;
+    background-color: white;
+    border-radius: 50px;
+    z-index: 1;
+}
+.onboardingLocationButtonDiv {
+    position: fixed;
+    z-index: 1;
+    bottom: 60px;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.locationsearchdiv input {
+    color: rgba(122, 118, 118, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+}
+.budget-slider {
+    rotate: 270deg;
+    height: 100%;
+    width: 276px !important;
+}
+.budget-slider-div {
+    height: 276px;
+    margin-top: 50px;
+    position: relative;
+}
+.budget-slider::-webkit-slider-thumb {
+    background: #daf5fe !important; 
+}
+.budget-slider::-moz-range-thumb {
+    background: #daf5fe !important;
+}
+.budget-slider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #daf5fe, #daf5fe);
+}
+.budget-slider::-moz-range-track {
+    background: linear-gradient(to right, #daf5fe, #daf5fe);
+}
+.current-value-div {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #b9e6f5;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
+}
+.user-profile-headshot {
+    width: 108px;
+    height: 111.239px;
+    flex-shrink: 0;
+}
+.profile-location-grid-div {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    gap: 20px;
+    align-items: center;
+}
+.user-profile-name {
+    font-family: DM Sans, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.user-profile-location {
+    text-align: center;
+    font-family: DM Sans, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    white-space: nowrap;
+}

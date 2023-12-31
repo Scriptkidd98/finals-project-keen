@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keen | Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="myStyles.css"/>
+    </head>
+    <body class="body-div">
+        <div class="column-flex">
+            <img src="user.png" alt="User Profile Headshot" class="user-profile-headshot"/>
+            <p class="user-profile-name"></p>
+            <div class="profile-location-grid-div">
+                <img src="Location-Icon.svg" alt="Map Marker Icon" className="locationicon"/>
+                <p class="user-profile-location"></p>
+            </div>
+        </div>
+        
+        <script>
+            if(localStorage.getItem('name')) {
+                document.querySelector('.user-profile-name').textContent = localStorage.getItem('name');
+            } else {
+                document.querySelector('.user-profile-name').textContent = 'John Doe';
+            }
+            
+            if(localStorage.getItem('location')) {
+                document.querySelector('.user-profile-location').textContent = localStorage.getItem('location');
+            } else {
+                document.querySelector('.user-profile-location').textContent = 'Lagos, Portugall';
+            }
+        </script>
+    </body>
+</html>

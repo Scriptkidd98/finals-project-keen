@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="myStyles.css"/>
+    </head>
+    <body class="crew-body-div body-div">
+        <div class="onboarding-header center-flex">
+            <button class="onboarding-header-back-button-div center-flex" onclick="navigateToPrevious()">
+                <img
+                    src="Back-Chevron-Icon.svg"
+                    alt='Back Chevron Icon' 
+                    class="onboarding-header-back-chevron-icon"  
+                />
+            </button>
+            <div class="onboarding-header-progress-container center-flex">             
+                <div class="onboarding-header-progress-outer-div">
+                    <div class="onboarding-header-progress-inner-div" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="onboarding-body-div">
+            <div class="onboarding-body-upper-div">
+                <h1 class="onboarding-heading-text">Who's Your Adventure Crew?</h1>
+                <p class="onboarding-info-text">Crafted Exclusively for Your Travel Crew!</p>
+            </div>
+
+            <div class="onboarding-body-middle-div">
+                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                    <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
+                    <span>🧳 Solo</span>
+                </button>
+                
+                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                    <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
+                    <span>👨‍👩‍👦 Family</span>
+                </button>
+                
+                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                    <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
+                    <span>👬 Friends</span>
+                </button>
+                
+                <button class="onboarding-select-button" onclick="toggleSelection(this)">
+                    <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
+                    <span>👫 Couple</span>
+                </button>
+            </div>  
+
+            <div class="onboarding-body-lower-div">
+                <button class="onboarding-action-button center-flex" onclick="navigateToLocation()">
+                    Next
+                    <img src="Forward-Arrow-Icon.svg" alt="Forward Arrow Icon" className="onboarding-action-button-forward-arrow-icon" style="margin-left: 5px"/>
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            function navigateToPrevious() {
+                window.location.href = 'budget.html';
+            }
+            function navigateToLocation() {
+                window.location.href = 'location.html';
+            }
+            function toggleSelection(button) {
+                const selectButtons = document.querySelectorAll('.onboarding-select-button');
+                
+                selectButtons.forEach(otherButton => {
+                  otherButton.classList.remove('checked');
+                  otherButton.querySelector('.selectButtonRadio').src = 'Grey-Circle-Icon.svg';
+                  otherButton.style.backgroundColor = 'transparent';
+                });
+                
+                button.classList.add('checked');
+                button.querySelector('.selectButtonRadio').src = 'Radio.svg';
+                button.style.backgroundColor = 'rgba(218, 245, 254, 1)';                
+            }
+        </script>
+    </body>
+</html>
