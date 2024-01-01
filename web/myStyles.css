@@ -297,6 +297,9 @@ button {
     align-items: center;
     margin: 40px auto 30px auto;
 }
+.location-body-div .flag-text {
+    margin-top: 30px;
+}
 .locationicon {
     height: 24px;
     width: 24px;
@@ -396,4 +399,9 @@ button {
     line-height: normal;
     letter-spacing: 0.28px;
     white-space: nowrap;
+}
+.flag-text {
+    color: red;
+    text-align: center;
+    font-size: small;
 }

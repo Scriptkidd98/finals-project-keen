@@ -44,15 +44,17 @@
         </div>
         
         <script>
+            var slider = document.getElementById("customRange1");
+            var output = document.querySelector(".current-value");
+            output.innerHTML = slider.value;
             function navigateToPrevious() {
                 window.location.href = 'register-password.html';
             }
             function navigateToCrew() {
-                window.location.href = 'crew.html';
+                localStorage.setItem('budget', `${slider.value}€`);
+                window.location.href = 'crew.html';  
             }
-            var slider = document.getElementById("customRange1");
-            var output = document.querySelector(".current-value");
-            output.innerHTML = slider.value;
+            
 
             slider.oninput = function() {
                 output.innerHTML = this.value;

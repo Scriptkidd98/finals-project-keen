@@ -22,6 +22,8 @@
             <div class="column-flex">
                 <input placeholder="johndoe@gmail.com" name="email" type="email" class="register-email-input" required/>
                 
+                <p class="flag-text"></p>
+                
                 <button class="onboarding-action-button center-flex" onclick="submitEmail()">
                     Next
                     <img src="Forward-Arrow-Icon.svg" alt="Forward Arrow Icon" className="onboarding-action-button-forward-arrow-icon" style="margin-left: 5px"/>
@@ -32,8 +34,12 @@
         <script>
             function submitEmail() {
                 const email = document.querySelector('.register-email-input').value;
-                localStorage.setItem('email', email);
-                window.location.href = 'register-password.html';
+                if(email !== '') {
+                    localStorage.setItem('email', email);
+                    window.location.href = 'register-password.html';
+                } else {
+                    document.querySelector('.flag-text').textContent = 'Email field is required';
+                }
             }
             function navigateToPrevious() {
                 window.location.href = 'register-name.html';

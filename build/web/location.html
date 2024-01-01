@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="myStyles.css"/>
     </head>
-    <body class="body-div">
+    <body class="body-div location-body-div">
         <div class="onboarding-header center-flex">
             <button class="onboarding-header-back-button-div center-flex" onclick="navigateToPrevious()">
                 <img
@@ -27,12 +27,15 @@
                 <h1 class="onboarding-heading-text">Let’s start Your Adventure!</h1>
                 <p class="onboarding-info-text">Share Your Starting Point</p>
             </div>
-
+            
             <div>
+                <p class="flag-text"></p>
+                
                 <div class="locationsearchdiv">
                     <input placeholder="Enter your location" type="text" class="onboarding-location-input" required/>
                     <img src="Location-Icon.svg" alt="Map Marker Icon" className="locationicon"/>
                 </div>
+                
                 <div class="borderradiusmapdiv"></div>
             </div>  
 
@@ -50,8 +53,12 @@
             }
             function navigateToHowKeen() {
                 const location = document.querySelector('.onboarding-location-input').value;
-                localStorage.setItem('location', location);
-                window.location.href = 'how-keen.html';
+                if(location !== '') {
+                    localStorage.setItem('location', location);
+                    window.location.href = 'how-keen.html';
+                } else {
+                    document.querySelector('.flag-text').textContent = 'Location field is required';
+                }
             }
         </script>
     </body>

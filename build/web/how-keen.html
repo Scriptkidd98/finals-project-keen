@@ -27,8 +27,10 @@
                 <h1 class="onboarding-heading-text">How <span class="keenspan">Keen</span> are you today?</h1>
                 <p class="onboarding-info-text">Let us know about your current mood</p>
             </div>
-
+            
             <div class="onboarding-body-middle-div">
+                <p class="flag-text"></p>
+                
                 <button class="onboarding-select-button howkeenselectbutton" onclick="toggleSelection(this, 1)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>
@@ -63,12 +65,17 @@
         </div>
         
         <script>
+            let how_keen;
             function navigateToPrevious() {
                 window.location.href = 'location.html';
             }
             function register() {
-                const email = localStorage.getItem('email');
-                window.location.href = "register.jsp?email=" + encodeURIComponent(email);
+                if(how_keen !== undefined) {
+                    const email = localStorage.getItem('email');
+                    window.location.href = "register.jsp?email=" + encodeURIComponent(email);
+                } else {
+                    document.querySelector('.flag-text').textContent = 'How keen selection is required';
+                }
             }
             function toggleSelection(button, number) {
                 const selectButtons = document.querySelectorAll('.onboarding-select-button');
@@ -84,11 +91,14 @@
                 button.style.backgroundColor = 'rgba(218, 245, 254, 1)'; 
                 
                 if(number === 1) {
-                    localStorage.setItem('how-keen', 'Chill');
+                    how_keen = 'Chill';
+                    localStorage.setItem('how-keen', how_keen);
                 } else if(number === 2) {
-                    localStorage.setItem('how-keen', 'Balanced');
+                    how_keen = 'Balanced';
+                    localStorage.setItem('how-keen', how_keen);
                 } else if(number === 3) {
-                    localStorage.setItem('how-keen', 'Thrilled');
+                    how_keen = 'Thrilled';
+                    localStorage.setItem('how-keen', how_keen);
                 }
             }
         </script>

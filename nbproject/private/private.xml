@@ -4,13 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/macx/NetBeansProjects/Keen/web/how-keen.html</file>
-            <file>file:/Users/macx/NetBeansProjects/Keen/web/register-email.html</file>
             <file>file:/Users/macx/NetBeansProjects/Keen/web/myStyles.css</file>
-            <file>file:/Users/macx/NetBeansProjects/Keen/web/register-name.html</file>
             <file>file:/Users/macx/NetBeansProjects/Keen/web/index.html</file>
-            <file>file:/Users/macx/NetBeansProjects/Keen/web/location.html</file>
-            <file>file:/Users/macx/NetBeansProjects/Keen/web/budget.html</file>
+            <file>file:/Users/macx/NetBeansProjects/Keen/web/profile.html</file>
+            <file>file:/Users/macx/NetBeansProjects/Keen/web/login.jsp</file>
             <file>file:/Users/macx/NetBeansProjects/Keen/web/crew.html</file>
+            <file>file:/Users/macx/NetBeansProjects/Keen/web/register.jsp</file>
         </group>
     </open-files>
 </project-private>

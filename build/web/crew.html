@@ -27,8 +27,10 @@
                 <h1 class="onboarding-heading-text">Who's Your Adventure Crew?</h1>
                 <p class="onboarding-info-text">Crafted Exclusively for Your Travel Crew!</p>
             </div>
-
+            
             <div class="onboarding-body-middle-div">
+                <p class="flag-text"></p>
+                
                 <button class="onboarding-select-button" onclick="toggleSelection(this, 1)">
                     <img src="Grey-Circle-Icon.svg" alt="Grey Radio Icon" class="selectButtonRadio"/>
                     <span>🧳 Solo</span>
@@ -59,11 +61,16 @@
         </div>
         
         <script>
+            let crew;
             function navigateToPrevious() {
                 window.location.href = 'budget.html';
             }
             function navigateToLocation() {
-                window.location.href = 'location.html';
+                if(crew !== undefined) {
+                    window.location.href = 'location.html';
+                } else {
+                    document.querySelector('.flag-text').textContent = 'Crew selection is required';
+                }
             }
             function toggleSelection(button, number) {
                 const selectButtons = document.querySelectorAll('.onboarding-select-button');
@@ -79,13 +86,17 @@
                 button.style.backgroundColor = 'rgba(218, 245, 254, 1)'; 
                 
                 if(number === 1) {
-                    localStorage.setItem('crew', 'Solo');
+                    crew = 'Solo';
+                    localStorage.setItem('crew', crew);
                 } else if(number === 2) {
-                    localStorage.setItem('crew', 'Family');
+                    crew = 'Family';
+                    localStorage.setItem('crew', crew);
                 } else if(number === 3) {
-                    localStorage.setItem('crew', 'Friends');
+                    crew = 'Friends';
+                    localStorage.setItem('crew', crew);
                 } else if(number === 4) {
-                    localStorage.setItem('crew', 'Couple');
+                    crew = 'Couple';
+                    localStorage.setItem('crew', crew);
                 }
             }
         </script>
